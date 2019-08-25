@@ -261,7 +261,7 @@ namespace CG
             this.trackBarHUE.Name = "trackBarHUE";
             this.trackBarHUE.Size = new System.Drawing.Size(237, 45);
             this.trackBarHUE.TabIndex = 24;
-            this.trackBarHUE.ValueChanged += new System.EventHandler(this.TrackBarHUE_ValueChanged);
+            this.trackBarHUE.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TrackBarHUE_MouseUp);
             // 
             // lbHUE
             // 
@@ -279,7 +279,7 @@ namespace CG
             this.trackBarIntensity.Name = "trackBarIntensity";
             this.trackBarIntensity.Size = new System.Drawing.Size(237, 45);
             this.trackBarIntensity.TabIndex = 26;
-            this.trackBarIntensity.ValueChanged += new System.EventHandler(this.TrackBarIntensity_ValueChanged);
+            this.trackBarIntensity.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TrackBarIntensity_MouseUp);
             // 
             // Form1
             // 

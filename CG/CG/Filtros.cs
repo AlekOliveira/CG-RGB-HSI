@@ -117,9 +117,6 @@ namespace CG
             }
         }
 
-        /*public static void changeHUE(Bitmap imgHSI, Bitmap imgDST)
-        {
-            
-        }*/
+       
     }
 }

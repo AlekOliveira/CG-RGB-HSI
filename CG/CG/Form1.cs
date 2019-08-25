@@ -107,10 +107,16 @@ namespace CG
             }
         }
 
-        private void TrackBarHUE_ValueChanged(object sender, EventArgs e)
+        private void TrackBarIntensity_ValueChanged(object sender, EventArgs e)
         {
-            if(imgSrc!=null)
-            {   int width = imgHsi.Width;
+            
+        }
+
+        private void TrackBarHUE_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (imgSrc != null)
+            {
+                int width = imgHsi.Width;
                 int height = imgHsi.Height;
                 double h, s, i;
 
@@ -119,7 +125,7 @@ namespace CG
                     for (int x = 0; x < width; x++)
                     {
                         Color cor = imgHsi.GetPixel(x, y);
-                        h = (cor.R + trackBarHUE.Value)%360;
+                        h = (cor.R + trackBarHUE.Value) % 360;
                         s = cor.G;
                         i = cor.B;
                         Color NovaCor = Color.FromArgb((byte)h, (byte)s, (byte)i);
@@ -132,7 +138,7 @@ namespace CG
             }
         }
 
-        private void TrackBarIntensity_ValueChanged(object sender, EventArgs e)
+        private void TrackBarIntensity_MouseUp(object sender, MouseEventArgs e)
         {
             if (imgSrc != null)
             {

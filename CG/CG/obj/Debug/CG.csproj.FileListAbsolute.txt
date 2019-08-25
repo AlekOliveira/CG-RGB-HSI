@@ -48,3 +48,13 @@ F:\CG\CG-RGB-HSI-master\CG\CG\obj\Debug\CG.csproj.GenerateResource.cache
 F:\CG\CG-RGB-HSI-master\CG\CG\obj\Debug\CG.csproj.CoreCompileInputs.cache
 F:\CG\CG-RGB-HSI-master\CG\CG\obj\Debug\CG.exe
 F:\CG\CG-RGB-HSI-master\CG\CG\obj\Debug\CG.pdb
+C:\Users\Alexandre\Documents\Repositorios\CG-RGB-HSI\CG\CG\bin\Debug\CG.exe.config
+C:\Users\Alexandre\Documents\Repositorios\CG-RGB-HSI\CG\CG\bin\Debug\CG.exe
+C:\Users\Alexandre\Documents\Repositorios\CG-RGB-HSI\CG\CG\bin\Debug\CG.pdb
+C:\Users\Alexandre\Documents\Repositorios\CG-RGB-HSI\CG\CG\obj\Debug\CG.csprojAssemblyReference.cache
+C:\Users\Alexandre\Documents\Repositorios\CG-RGB-HSI\CG\CG\obj\Debug\CG.Form1.resources
+C:\Users\Alexandre\Documents\Repositorios\CG-RGB-HSI\CG\CG\obj\Debug\CG.Properties.Resources.resources
+C:\Users\Alexandre\Documents\Repositorios\CG-RGB-HSI\CG\CG\obj\Debug\CG.csproj.GenerateResource.cache
+C:\Users\Alexandre\Documents\Repositorios\CG-RGB-HSI\CG\CG\obj\Debug\CG.csproj.CoreCompileInputs.cache
+C:\Users\Alexandre\Documents\Repositorios\CG-RGB-HSI\CG\CG\obj\Debug\CG.exe
+C:\Users\Alexandre\Documents\Repositorios\CG-RGB-HSI\CG\CG\obj\Debug\CG.pdb
