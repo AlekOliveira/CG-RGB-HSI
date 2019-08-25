@@ -15,6 +15,7 @@ namespace CG
         private Image image;
         private Bitmap imgSrc;
         private Bitmap imgHsi;
+        private Bitmap imgDst;
        
 
         public Form1()
@@ -36,8 +37,10 @@ namespace CG
 
                 imgSrc = (Bitmap)image;
                 imgHsi = new Bitmap(image);
+                imgDst = new Bitmap(image);
                 Filtros.convertRGB_to_HSI(imgSrc, imgHsi);
-                //pictureBox2.Image = imgHsi;
+                Filtros.convertHSI_toRGB(imgHsi, imgDst);
+                pictureBox2.Image = imgDst;
                 //pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
             }
         }
@@ -101,6 +104,58 @@ namespace CG
                 lbH.Text = "H = " + coresHSI.R.ToString();
                 lbS.Text = "S = " + coresHSI.G.ToString();
                 lbI.Text = "I = " + coresHSI.B.ToString();
+            }
+        }
+
+        private void TrackBarHUE_ValueChanged(object sender, EventArgs e)
+        {
+            if(imgSrc!=null)
+            {   int width = imgHsi.Width;
+                int height = imgHsi.Height;
+                double h, s, i;
+
+                for (int y = 0; y < height; y++)
+                {
+                    for (int x = 0; x < width; x++)
+                    {
+                        Color cor = imgHsi.GetPixel(x, y);
+                        h = (cor.R + trackBarHUE.Value)%360;
+                        s = cor.G;
+                        i = cor.B;
+                        Color NovaCor = Color.FromArgb((byte)h, (byte)s, (byte)i);
+
+                        imgDst.SetPixel(x, y, NovaCor);
+                    }
+                }
+                Filtros.convertHSI_toRGB(imgDst, imgDst);
+                pictureBox2.Image = imgDst;
+            }
+        }
+
+        private void TrackBarIntensity_ValueChanged(object sender, EventArgs e)
+        {
+            if (imgSrc != null)
+            {
+                int width = imgHsi.Width;
+                int height = imgHsi.Height;
+                double h, s, i;
+
+                for (int y = 0; y < height; y++)
+                {
+                    for (int x = 0; x < width; x++)
+                    {
+                        Color cor = imgHsi.GetPixel(x, y);
+                        h = cor.R;
+                        s = cor.G;
+                        i = cor.B;
+                        i += i * trackBarIntensity.Value / 100;
+                        Color NovaCor = Color.FromArgb((byte)h, (byte)s, (byte)i);
+
+                        imgDst.SetPixel(x, y, NovaCor);
+                    }
+                }
+                Filtros.convertHSI_toRGB(imgDst, imgDst);
+                pictureBox2.Image = imgDst;
             }
         }
     }

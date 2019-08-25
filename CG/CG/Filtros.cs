@@ -78,9 +78,9 @@ namespace CG
                     
                     if(h < 2*Math.PI/3)
                     {
-                        X = ((double)(i * (1 - s)));
-                        Y = ((double)i * (1 + ((s * Math.Cos(h)) / (Math.Cos(Math.PI / 3 - h)))));
-                        Z = ((double)3 * i - (x + y));
+                        X = ((i * (1 - s)));
+                        Y = (i * (1 + ((s * Math.Cos(h)) / (Math.Cos(Math.PI / 3 - h)))));
+                        Z = (3 * i - (X + Y));
 
                         b = X;
                         r = Y;
@@ -88,9 +88,9 @@ namespace CG
                     }
                     else if(h>=2*Math.PI/3 && h<4*Math.PI/3)
                     {
-                        h = ((double)h - 2 * Math.PI / 3);
-                        X = ((double)i * (1 - s));
-                        Y = ((double)i * (1 + ((s * Math.Cos(h)) / (Math.Cos(Math.PI / 3 - h)))));
+                        h = (h - 2 * Math.PI / 3);
+                        X = (i * (1 - s));
+                        Y = (i * (1 + ((s * Math.Cos(h)) / (Math.Cos(Math.PI / 3 - h)))));
                         Z = 3 * i - (X + Y);
 
                         r = X;
@@ -100,21 +100,26 @@ namespace CG
                     else
                     {
                         h = h - 4 * Math.PI/3;
-                        X = ((double)i * (1 - s));
-                        Y = ((double)i * (1 + ((s * Math.Cos(h)) / (Math.Cos(Math.PI / 3 - h)))));
-                        Z = ((double)3 * i - (x + y));
+                        X = (i * (1 - s));
+                        Y = (i * (1 + ((s * Math.Cos(h)) / (Math.Cos(Math.PI / 3 - h)))));
+                        Z = (3 * i - (X + Y));
 
                         g = X;
                         b = Y;
                         r = Z;
                     }
-                    r = ((double)r * 255);
-                    g = ((double)g * 255);
-                    b = ((double)b * 255);
+                    r = (r * 255);
+                    g = (g * 255);
+                    b = (b * 255);
                     Color NovaCor = Color.FromArgb((byte)r,(byte)g,(byte)b);
                     imgBitmapRGB.SetPixel(x, y, NovaCor);
                 }
             }
         }
+
+        /*public static void changeHUE(Bitmap imgHSI, Bitmap imgDST)
+        {
+            
+        }*/
     }
 }

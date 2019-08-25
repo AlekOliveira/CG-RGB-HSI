@@ -49,14 +49,16 @@ namespace CG
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.lbTrackbar = new System.Windows.Forms.Label();
+            this.trackBarHUE = new System.Windows.Forms.TrackBar();
+            this.lbHUE = new System.Windows.Forms.Label();
+            this.trackBarIntensity = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarHUE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarIntensity)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -64,15 +66,15 @@ namespace CG
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.pictureBox1.Location = new System.Drawing.Point(12, 23);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 300);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.Size = new System.Drawing.Size(400, 400);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PictureBox1_MouseMove);
             // 
             // btAbrir
             // 
-            this.btAbrir.Location = new System.Drawing.Point(36, 346);
+            this.btAbrir.Location = new System.Drawing.Point(17, 454);
             this.btAbrir.Name = "btAbrir";
             this.btAbrir.Size = new System.Drawing.Size(48, 23);
             this.btAbrir.TabIndex = 1;
@@ -82,7 +84,7 @@ namespace CG
             // 
             // btLimpar
             // 
-            this.btLimpar.Location = new System.Drawing.Point(90, 345);
+            this.btLimpar.Location = new System.Drawing.Point(71, 453);
             this.btLimpar.Name = "btLimpar";
             this.btLimpar.Size = new System.Drawing.Size(46, 23);
             this.btLimpar.TabIndex = 2;
@@ -119,10 +121,10 @@ namespace CG
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox2.Location = new System.Drawing.Point(475, 23);
+            this.pictureBox2.Location = new System.Drawing.Point(543, 23);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(300, 300);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.Size = new System.Drawing.Size(400, 400);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
@@ -131,7 +133,7 @@ namespace CG
             this.lbH.AutoSize = true;
             this.lbH.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbH.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbH.Location = new System.Drawing.Point(189, 329);
+            this.lbH.Location = new System.Drawing.Point(170, 437);
             this.lbH.Name = "lbH";
             this.lbH.Size = new System.Drawing.Size(31, 13);
             this.lbH.TabIndex = 7;
@@ -142,7 +144,7 @@ namespace CG
             this.lbS.AutoSize = true;
             this.lbS.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbS.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbS.Location = new System.Drawing.Point(189, 342);
+            this.lbS.Location = new System.Drawing.Point(170, 450);
             this.lbS.Name = "lbS";
             this.lbS.Size = new System.Drawing.Size(25, 13);
             this.lbS.TabIndex = 8;
@@ -153,7 +155,7 @@ namespace CG
             this.lbI.AutoSize = true;
             this.lbI.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbI.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbI.Location = new System.Drawing.Point(189, 355);
+            this.lbI.Location = new System.Drawing.Point(170, 463);
             this.lbI.Name = "lbI";
             this.lbI.Size = new System.Drawing.Size(31, 13);
             this.lbI.TabIndex = 9;
@@ -164,7 +166,7 @@ namespace CG
             this.lbR.AutoSize = true;
             this.lbR.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbR.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbR.Location = new System.Drawing.Point(318, 329);
+            this.lbR.Location = new System.Drawing.Point(299, 437);
             this.lbR.Name = "lbR";
             this.lbR.Size = new System.Drawing.Size(31, 13);
             this.lbR.TabIndex = 10;
@@ -175,7 +177,7 @@ namespace CG
             this.lbG.AutoSize = true;
             this.lbG.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbG.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbG.Location = new System.Drawing.Point(318, 342);
+            this.lbG.Location = new System.Drawing.Point(299, 450);
             this.lbG.Name = "lbG";
             this.lbG.Size = new System.Drawing.Size(31, 13);
             this.lbG.TabIndex = 11;
@@ -186,7 +188,7 @@ namespace CG
             this.lbB.AutoSize = true;
             this.lbB.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbB.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbB.Location = new System.Drawing.Point(318, 358);
+            this.lbB.Location = new System.Drawing.Point(299, 466);
             this.lbB.Name = "lbB";
             this.lbB.Size = new System.Drawing.Size(31, 13);
             this.lbB.TabIndex = 12;
@@ -197,7 +199,7 @@ namespace CG
             this.lbC.AutoSize = true;
             this.lbC.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbC.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbC.Location = new System.Drawing.Point(250, 328);
+            this.lbC.Location = new System.Drawing.Point(231, 436);
             this.lbC.Name = "lbC";
             this.lbC.Size = new System.Drawing.Size(31, 13);
             this.lbC.TabIndex = 13;
@@ -208,7 +210,7 @@ namespace CG
             this.lbM.AutoSize = true;
             this.lbM.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbM.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbM.Location = new System.Drawing.Point(250, 342);
+            this.lbM.Location = new System.Drawing.Point(231, 450);
             this.lbM.Name = "lbM";
             this.lbM.Size = new System.Drawing.Size(31, 13);
             this.lbM.TabIndex = 14;
@@ -219,7 +221,7 @@ namespace CG
             this.lbYY.AutoSize = true;
             this.lbYY.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbYY.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbYY.Location = new System.Drawing.Point(250, 358);
+            this.lbYY.Location = new System.Drawing.Point(231, 466);
             this.lbYY.Name = "lbYY";
             this.lbYY.Size = new System.Drawing.Size(31, 13);
             this.lbYY.TabIndex = 15;
@@ -228,7 +230,7 @@ namespace CG
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox4.Location = new System.Drawing.Point(333, 25);
+            this.pictureBox4.Location = new System.Drawing.Point(418, 126);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(95, 95);
             this.pictureBox4.TabIndex = 17;
@@ -237,7 +239,7 @@ namespace CG
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox3.Location = new System.Drawing.Point(333, 126);
+            this.pictureBox3.Location = new System.Drawing.Point(418, 227);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(95, 95);
             this.pictureBox3.TabIndex = 22;
@@ -246,36 +248,47 @@ namespace CG
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox5.Location = new System.Drawing.Point(333, 230);
+            this.pictureBox5.Location = new System.Drawing.Point(418, 328);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(95, 95);
             this.pictureBox5.TabIndex = 23;
             this.pictureBox5.TabStop = false;
             // 
-            // trackBar1
+            // trackBarHUE
             // 
-            this.trackBar1.Location = new System.Drawing.Point(525, 358);
-            this.trackBar1.Maximum = 100;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(237, 45);
-            this.trackBar1.TabIndex = 24;
+            this.trackBarHUE.Location = new System.Drawing.Point(587, 453);
+            this.trackBarHUE.Maximum = 360;
+            this.trackBarHUE.Name = "trackBarHUE";
+            this.trackBarHUE.Size = new System.Drawing.Size(237, 45);
+            this.trackBarHUE.TabIndex = 24;
+            this.trackBarHUE.ValueChanged += new System.EventHandler(this.TrackBarHUE_ValueChanged);
             // 
-            // lbTrackbar
+            // lbHUE
             // 
-            this.lbTrackbar.AutoSize = true;
-            this.lbTrackbar.Location = new System.Drawing.Point(535, 330);
-            this.lbTrackbar.Name = "lbTrackbar";
-            this.lbTrackbar.Size = new System.Drawing.Size(35, 13);
-            this.lbTrackbar.TabIndex = 25;
-            this.lbTrackbar.Text = "label1";
+            this.lbHUE.AutoSize = true;
+            this.lbHUE.Location = new System.Drawing.Point(594, 437);
+            this.lbHUE.Name = "lbHUE";
+            this.lbHUE.Size = new System.Drawing.Size(27, 13);
+            this.lbHUE.TabIndex = 25;
+            this.lbHUE.Text = "Hue";
+            // 
+            // trackBarIntensity
+            // 
+            this.trackBarIntensity.Location = new System.Drawing.Point(587, 517);
+            this.trackBarIntensity.Maximum = 100;
+            this.trackBarIntensity.Name = "trackBarIntensity";
+            this.trackBarIntensity.Size = new System.Drawing.Size(237, 45);
+            this.trackBarIntensity.TabIndex = 26;
+            this.trackBarIntensity.ValueChanged += new System.EventHandler(this.TrackBarIntensity_ValueChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(908, 427);
-            this.Controls.Add(this.lbTrackbar);
+            this.ClientSize = new System.Drawing.Size(999, 570);
+            this.Controls.Add(this.trackBarIntensity);
+            this.Controls.Add(this.lbHUE);
             this.Controls.Add(this.lbR);
             this.Controls.Add(this.lbG);
             this.Controls.Add(this.lbM);
@@ -285,7 +298,7 @@ namespace CG
             this.Controls.Add(this.lbYY);
             this.Controls.Add(this.lbH);
             this.Controls.Add(this.lbS);
-            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.trackBarHUE);
             this.Controls.Add(this.btAbrir);
             this.Controls.Add(this.btLimpar);
             this.Controls.Add(this.pictureBox5);
@@ -302,7 +315,8 @@ namespace CG
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarHUE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarIntensity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,8 +343,9 @@ namespace CG
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.Label lbTrackbar;
+        private System.Windows.Forms.TrackBar trackBarHUE;
+        private System.Windows.Forms.Label lbHUE;
+        private System.Windows.Forms.TrackBar trackBarIntensity;
     }
 }
 
